@@ -32,10 +32,6 @@ end
 if not redis:get(Server_Devid.."User_Devbots1") then
 io.write('\n\27[1;35mSend UserName For Sudo : ارسل معرف Carbon ...\n\27[0;39;49m')
 local User_Sudo = io.read():gsub('@','')
-if User_Sudo ~= '' then
-io.write('\n\27[1;31m If ip server is blocked : سيرفرك لقد تم حظره من السورس \n\27[0;39;49m')
-os.exit()
-end
 if User_Info.Info.Chek == "Not_Info" then
 io.write('\n\27[1;31m The UserName was not Saved : المعرف غلط ارسل المعرف صحيح\n\27[0;39;49m')
 os.execute('lua NightRang.lua')
