@@ -33,9 +33,6 @@ if not redis:get(Server_Devid.."User_Devbots1") then
 io.write('\n\27[1;35mSend UserName For Sudo : ارسل معرف Carbon ...\n\27[0;39;49m')
 local User_Sudo = io.read():gsub('@','')
 if User_Sudo ~= '' then
-local GetInfoUser = https.request("https://devstorm.ml/api/source/?id="..User_Sudo)
-local User_Info = JSON.decode(GetInfoUser) 
-if User_Info.Info.Chek == "is_block" then
 io.write('\n\27[1;31m If ip server is blocked : سيرفرك لقد تم حظره من السورس \n\27[0;39;49m')
 os.exit()
 end
